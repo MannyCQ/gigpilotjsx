@@ -857,7 +857,7 @@ function Outreach({outreach,setOutreach,plan,onUpgrade}) {
                   )}
                 </td>
                 <td>
-                  <div style={{display:"flex",gap:6"}}>
+                  <div style={{display:"flex",gap:6}}>
                     {o.status!=="replied"&&<button className="btn btn-sm b-teal" style={{background:"var(--tealDim)",color:"var(--teal)",border:"1px solid rgba(0,212,170,.2)",borderRadius:8,padding:"4px 10px",fontSize:12}} onClick={()=>updateStatus(o.id,"replied")}>Mark replied</button>}
                     {o.status==="sent"&&<button className="btn btn-sm" style={{background:"rgba(255,255,255,.04)",color:"var(--text3)",border:"1px solid var(--border)",borderRadius:8,padding:"4px 10px",fontSize:12}} onClick={()=>updateStatus(o.id,"no_response")}>No response</button>}
                   </div>
@@ -1066,7 +1066,7 @@ export default function App() {
   const [emailVenue,setEmailVenue]=useState(null);
   const [showUpgrade,setShowUpgrade]=useState(false);
   const [toast,setToast]=useState(null);
-  const [isMobile,setIsMobile]=useState(window.innerWidth<768);
+  const [isMobile,setIsMobile]=useState(false);
 
   useEffect(()=>{
     const r=()=>setIsMobile(window.innerWidth<768);
@@ -1178,4 +1178,3 @@ export default function App() {
     </>
   );
 }
-
